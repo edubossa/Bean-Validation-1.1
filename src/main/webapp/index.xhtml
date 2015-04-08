@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <meta charset="UTF-8" />
+        <title>Bean Validator</title>
+    </h:head>
+    
+<body>
+
+	<h:form id="formulario">
+		<h:messages for="email, cep" errorClass="error" />	
+     <h:panelGrid columns="2">
+          <h:outputLabel value="Email: " />
+          <h:inputText id="email" value="#{contatoBean.email}"/>
+          <h:outputLabel value="CEP: " />
+          <h:inputText id="cep" value="#{contatoBean.cep}"/>
+          <h:commandButton action="#{contatoBean.enviaEmail}" value="Enviar Email"/>
+     </h:panelGrid>
+	</h:form>
+	
+</body>
+
+</html>
